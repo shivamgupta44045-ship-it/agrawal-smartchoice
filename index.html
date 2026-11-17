@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrawal Smartchoice | Luxury Handcrafted Personal Care</title>
+  
+  <!-- Tailwind CSS CDN & FontAwesome Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D4AF37',
+              darkgold: '#B8860B',
+              warm: '#FBF9F5',
+              dark: '#1C1917',
+              accent: '#EAB308'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    .gold-gradient {
+      background: linear-gradient(135deg, #F3E7C4 0%, #E2BA63 50%, #C6922C 100%);
+    }
+  </style>
+</head>
+<body class="bg-brand-warm text-stone-800 font-sans antialiased selection:bg-amber-100 selection:text-amber-900">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-stone-900 text-amber-200 text-xs py-2 px-4 text-center font-medium tracking-wide">
+    🌿 100% Pure & Botanical Ingredients | Free Shipping on Orders above ₹499 | Smart Deal, Smart Life!
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-sm transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-amber-500 rounded-xl flex items-center justify-center text-white text-2xl shadow-md shadow-amber-200">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </div>
+          <div>
+            <span class="text-xl sm:text-2xl font-bold tracking-tight text-stone-900 block leading-tight font-serif">Agrawal</span>
+            <span class="text-[10px] tracking-widest uppercase font-semibold text-amber-600 block">SMARTCHOICE</span>
+          </div>
+        </a>
+
+        <!-- Desktop Links -->
+        <div class="hidden md:flex items-center space-x-8 font-medium text-stone-700 text-sm">
+          <a href="#shop" class="hover:text-amber-600 transition">Our Collection</a>
+          <a href="#about" class="hover:text-amber-600 transition">Brand Story</a>
+          <a href="#why-us" class="hover:text-amber-600 transition">Why Smartchoice</a>
+          <a href="#feedback" class="hover:text-amber-600 transition">Reviews</a>
+          <a href="#contact" class="hover:text-amber-600 transition">Contact</a>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center gap-4">
+          <button onclick="toggleCart()" class="relative p-2.5 text-stone-800 hover:text-amber-600 transition">
+            <i class="fa-solid fa-cart-shopping text-xl"></i>
+            <span id="cartCountBadge" class="absolute -top-1 -right-1 bg-amber-600 text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow">0</span>
+          </button>
+          <a href="https://wa.me/919039285435" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-emerald-700 text-white px-4 py-2 rounded-full text-xs font-semibold tracking-wider hover:bg-emerald-800 shadow transition">
+            <i class="fa-brands fa-whatsapp text-sm"></i> WhatsApp Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header class="relative bg-gradient-to-b from-amber-50/60 to-brand-warm py-16 lg:py-24 overflow-hidden border-b border-stone-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-block py-1 px-3 rounded-full bg-amber-100 text-amber-800 text-xs font-bold tracking-widest uppercase mb-4">
+            Pure • Botanical • Authentic
+          </span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-stone-900 leading-tight">
+            Nourish Your Skin with <span class="text-amber-700 italic">Earthy Radiance.</span>
+          </h1>
+          <p class="mt-4 text-stone-600 text-base sm:text-lg max-w-xl font-light leading-relaxed">
+            Crafted for pure skincare purity. Discover handcrafted formulations enriched with Multani Mitti, Goat Milk, & natural Vitamin C extracts.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#shop" class="bg-stone-900 hover:bg-amber-800 text-white px-8 py-3.5 rounded-full font-medium shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5">
+              Explore Soaps
+            </a>
+            <a href="#about" class="bg-white hover:bg-stone-50 border border-stone-300 text-stone-800 px-8 py-3.5 rounded-full font-medium transition">
+              Our Heritage
+            </a>
+          </div>
+          <div class="mt-10 flex items-center gap-6 text-stone-600 text-xs font-medium">
+            <div class="flex items-center gap-2"><i class="fa-solid fa-leaf text-emerald-600 text-base"></i> Handcrafted</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-shield-halved text-amber-600 text-base"></i> Toxin Free</div>
+            <div class="flex items-center gap-2"><i class="fa-solid fa-truck-fast text-stone-800 text-base"></i> Fast Dispatch</div>
+          </div>
+        </div>
+
+        <!-- Hero Featured Card -->
+        <div class="relative flex justify-center">
+          <div class="w-full max-w-md bg-white p-6 rounded-3xl shadow-2xl border border-stone-100 relative group">
+            <div class="relative h-80 rounded-2xl overflow-hidden bg-stone-100 flex items-center justify-center">
+              <img id="heroImage" src="https://images.unsplash.com/photo-1607006314644-8d96d1921350?auto=format&fit=crop&w=700&q=80" alt="C-Glow Soap" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+              <span class="absolute top-4 left-4 bg-stone-900/80 backdrop-blur-md text-amber-300 text-xs px-3 py-1 rounded-full font-semibold">Bestseller</span>
+            </div>
+            <div class="mt-5">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h3 class="text-xl font-serif font-bold text-stone-900">C-GLOW Beauty Bar</h3>
+                  <p class="text-xs text-stone-500 mt-0.5">Vitamin C & Fresh Goat Milk Nourishment</p>
+                </div>
+                <div class="text-right">
+                  <span class="text-xl font-bold text-stone-900">₹49</span>
+                  <span class="text-xs text-stone-400 line-through block">₹75</span>
+                </div>
+              </div>
+              <button onclick="addToCart(1)" class="w-full mt-4 bg-amber-600 hover:bg-amber-700 text-white py-3 rounded-xl font-semibold shadow-md transition flex items-center justify-center gap-2 text-sm">
+                <i class="fa-solid fa-bag-shopping"></i> Quick Add to Bag
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- STORE CATALOG -->
+  <section id="shop" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <span class="text-amber-700 text-xs font-bold uppercase tracking-widest">Handmade In India</span>
+      <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 mt-2">Signature Bathing Bars</h2>
+      <p class="text-stone-600 mt-3 text-sm">Specially curated personal care essentials formulated for glowing, healthy skin.</p>
+    </div>
+
+    <!-- Products Grid -->
+    <div id="productGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Dynamic Products populated via JS -->
+    </div>
+  </section>
+
+  <!-- BRAND STORY / ABOUT US -->
+  <section id="about" class="py-20 bg-stone-100 border-y border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <span class="text-amber-800 text-xs font-bold uppercase tracking-widest">About Agrawal Smartchoice</span>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-stone-900 leading-snug">
+            Pure Care, Honest Ingredients & Smart Value.
+          </h2>
+          <p class="text-stone-700 leading-relaxed text-sm">
+            At <strong>Agrawal Smartchoice</strong>, we believe luxurious personal care should never be out of reach. Born with the philosophy of <em>"Smart Deal, Smart Life, Smart Choice"</em>, our artisanal personal care range combines traditional herbal goodness like Multani Mitti and Citrus extracts with modern dermatological standards.
+          </p>
+
+          <div class="grid sm:grid-cols-2 gap-4 pt-4">
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-stone-200">
+              <h4 class="font-serif font-bold text-stone-900 text-base mb-1">Our Mission</h4>
+              <p class="text-stone-600 text-xs leading-relaxed">Deliver high-grade, chemical-conscious personal care essentials directly to your doorstep at unmatched prices.</p>
+            </div>
+            <div class="bg-white p-5 rounded-2xl shadow-sm border border-stone-200">
+              <h4 class="font-serif font-bold text-stone-900 text-base mb-1">Our Vision</h4>
+              <p class="text-stone-600 text-xs leading-relaxed">Become India’s most trusted household name for conscious bathing & wellness lifestyle products.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl border border-stone-200 shadow-md">
+          <h3 class="text-xl font-serif font-bold text-stone-900 mb-6">Why Choose Us?</h3>
+          <ul class="space-y-4 text-sm text-stone-700">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-amber-600 mt-1"></i>
+              <span><strong>Natural Exfoliants:</strong> Packed with pure clays, milk proteins, and natural fruit oils.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-amber-600 mt-1"></i>
+              <span><strong>Zero Harsh Chemicals:</strong> Cruelty-free and formulated to be gentle on all Indian skin types.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-amber-600 mt-1"></i>
+              <span><strong>Direct Smart Pricing:</strong> No unnecessary marketing markup; honest pricing direct from maker.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-circle-check text-amber-600 mt-1"></i>
+              <span><strong>Personal Support:</strong> Direct WhatsApp support for quick orders and answers.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOMER REVIEWS & FEEDBACK FORM -->
+  <section id="feedback" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-3 gap-12">
+      
+      <!-- Existing Reviews Column -->
+      <div class="lg:col-span-2">
+        <span class="text-amber-800 text-xs font-bold uppercase tracking-widest">Real Customer Voices</span>
+        <h2 class="text-3xl font-serif font-bold text-stone-900 mt-2 mb-8">What People Are Saying</h2>
+
+        <div id="reviewsList" class="space-y-4">
+          <!-- Sample Review 1 -->
+          <div class="p-6 bg-white rounded-2xl border border-stone-200 shadow-sm">
+            <div class="flex items-center gap-1 text-amber-500 text-xs mb-2">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-stone-700 text-sm italic">"The Earthy Essence Multani Mitti soap is fantastic for oily skin. Cleans so well without drying out my face!"</p>
+            <div class="mt-3 flex justify-between items-center text-xs text-stone-500">
+              <span class="font-semibold text-stone-800">Pooja Sharma, Indore</span>
+              <span>Verified Buyer</span>
+            </div>
+          </div>
+          <!-- Sample Review 2 -->
+          <div class="p-6 bg-white rounded-2xl border border-stone-200 shadow-sm">
+            <div class="flex items-center gap-1 text-amber-500 text-xs mb-2">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="text-stone-700 text-sm italic">"Sunshine Orange at ₹25 is such good value. Smells very fresh in morning showers!"</p>
+            <div class="mt-3 flex justify-between items-center text-xs text-stone-500">
+              <span class="font-semibold text-stone-800">Rahul Verma, Bhopal</span>
+              <span>Verified Buyer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feedback Submission Form -->
+      <div class="bg-white p-6 sm:p-8 rounded-3xl border border-stone-200 shadow-md">
+        <h3 class="font-serif font-bold text-xl text-stone-900 mb-2">Share Your Feedback</h3>
+        <p class="text-stone-500 text-xs mb-6">Your honest review helps us maintain our quality standards.</p>
+
+        <form id="feedbackForm" onsubmit="handleFeedbackSubmit(event)" class="space-y-4 text-xs">
+          <div>
+            <label class="block font-semibold text-stone-700 mb-1">Your Full Name</label>
+            <input type="text" id="fbName" required placeholder="e.g. Anjali Gupta" class="w-full px-3 py-2.5 rounded-lg border border-stone-300 focus:outline-none focus:ring-1 focus:ring-amber-600 text-sm">
+          </div>
+          <div>
+            <label class="block font-semibold text-stone-700 mb-1">City / State</label>
+            <input type="text" id="fbCity" required placeholder="e.g. Gwalior, MP" class="w-full px-3 py-2.5 rounded-lg border border-stone-300 focus:outline-none focus:ring-1 focus:ring-amber-600 text-sm">
+          </div>
+          <div>
+            <label class="block font-semibold text-stone-700 mb-1">Rating</label>
+            <select id="fbRating" class="w-full px-3 py-2.5 rounded-lg border border-stone-300 focus:outline-none focus:ring-1 focus:ring-amber-600 text-sm">
+              <option value="5">⭐⭐⭐⭐⭐ (5/5 Excellent)</option>
+              <option value="4">⭐⭐⭐⭐ (4/5 Very Good)</option>
+              <option value="3">⭐⭐⭐ (3/5 Good)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-semibold text-stone-700 mb-1">Feedback / Experience</label>
+            <textarea id="fbMessage" rows="3" required placeholder="Write a few lines about the soap fragrance, feel, etc." class="w-full px-3 py-2.5 rounded-lg border border-stone-300 focus:outline-none focus:ring-1 focus:ring-amber-600 text-sm"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-stone-900 hover:bg-stone-800 text-white py-3 rounded-xl font-medium tracking-wide shadow transition">
+            Submit Feedback
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQS -->
+  <section class="py-16 bg-stone-50 border-t border-stone-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-serif font-bold text-center text-stone-900 mb-8">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="group bg-white p-5 rounded-2xl border border-stone-200 cursor-pointer">
+          <summary class="font-semibold text-sm text-stone-800 flex justify-between items-center">
+            Are these soaps safe for sensitive and acne-prone skin?
+            <i class="fa-solid fa-chevron-down text-stone-400 group-open:rotate-180 transition"></i>
+          </summary>
+          <p class="text-xs text-stone-600 mt-3 leading-relaxed">Yes! Our Earthy Essence Multani Mitti soap is crafted specifically to purify pores and balance excess oil without causing harsh irritation.</p>
+        </details>
+        <details class="group bg-white p-5 rounded-2xl border border-stone-200 cursor-pointer">
+          <summary class="font-semibold text-sm text-stone-800 flex justify-between items-center">
+            How do I place an order and pay?
+            <i class="fa-solid fa-chevron-down text-stone-400 group-open:rotate-180 transition"></i>
+          </summary>
+          <p class="text-xs text-stone-600 mt-3 leading-relaxed">Add any products to your cart, click 'Checkout', enter your address, and choose WhatsApp Order or UPI payment. We confirm right away via WhatsApp and Email.</p>
+        </details>
+        <details class="group bg-white p-5 rounded-2xl border border-stone-200 cursor-pointer">
+          <summary class="font-semibold text-sm text-stone-800 flex justify-between items-center">
+            What is the delivery timeline?
+            <i class="fa-solid fa-chevron-down text-stone-400 group-open:rotate-180 transition"></i>
+          </summary>
+          <p class="text-xs text-stone-600 mt-3 leading-relaxed">Orders are usually dispatched within 24 hours. Depending on your location across India, delivery takes 3 to 6 business days.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & POLICIES FOOTER -->
+  <footer id="contact" class="bg-stone-950 text-stone-300 pt-16 pb-8 border-t border-stone-800 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-stone-800">
+      
+      <!-- Col 1 -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <div class="w-8 h-8 bg-amber-500 rounded-lg flex items-center justify-center text-white text-lg">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </div>
+          <span class="text-lg font-serif font-bold text-white tracking-wide">Agrawal Smartchoice</span>
+        </div>
+        <p class="text-xs text-stone-400 leading-relaxed">
+          Smart Deal, Smart Life, Smart Choice. Dedicated to bringing natural wellness and personal care soaps with pure craft and love.
+        </p>
+      </div>
+
+      <!-- Col 2: Quick Links -->
+      <div>
+        <h4 class="text-white font-semibold text-xs tracking-wider uppercase mb-4">Quick Navigation</h4>
+        <ul class="space-y-2 text-xs text-stone-400">
+          <li><a href="#shop" class="hover:text-amber-400 transition">Our Product Line</a></li>
+          <li><a href="#about" class="hover:text-amber-400 transition">About Our Brand</a></li>
+          <li><a href="#why-us" class="hover:text-amber-400 transition">Why Smartchoice</a></li>
+          <li><a href="#feedback" class="hover:text-amber-400 transition">Customer Reviews</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Policies -->
+      <div>
+        <h4 class="text-white font-semibold text-xs tracking-wider uppercase mb-4">Our Policies</h4>
+        <ul class="space-y-2 text-xs text-stone-400">
+          <li><button onclick="showPolicy('shipping')" class="hover:text-amber-400 transition">Shipping & Delivery Policy</button></li>
+          <li><button onclick="showPolicy('returns')" class="hover:text-amber-400 transition">Refund & Return Policy</button></li>
+          <li><button onclick="showPolicy('privacy')" class="hover:text-amber-400 transition">Privacy & Safety Policy</button></li>
+          <li><button onclick="showPolicy('terms')" class="hover:text-amber-400 transition">Terms of Service</button></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact -->
+      <div>
+        <h4 class="text-white font-semibold text-xs tracking-wider uppercase mb-4">Customer Support</h4>
+        <div class="space-y-3 text-xs text-stone-400">
+          <p class="flex items-center gap-2">
+            <i class="fa-solid fa-phone text-amber-500"></i>
+            <span>+91 9039285435</span>
+          </p>
+          <p class="flex items-center gap-2">
+            <i class="fa-solid fa-envelope text-amber-500"></i>
+            <span>agrawalsmartchoice@gmail.com</span>
+          </p>
+          <p class="flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-emerald-500"></i>
+            <span>WhatsApp: 9039285435</span>
+          </p>
+          <div class="pt-2 flex items-center gap-3 text-base">
+            <a href="https://wa.me/919039285435" class="w-8 h-8 rounded-full bg-stone-800 flex items-center justify-center hover:bg-emerald-600 text-white transition"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:agrawalsmartchoice@gmail.com" class="w-8 h-8 rounded-full bg-stone-800 flex items-center justify-center hover:bg-amber-600 text-white transition"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright & Admin Button -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 flex flex-wrap justify-between items-center text-xs text-stone-500">
+      <div>
+        © <span id="currentYear"></span> Agrawal Smartchoice. All Rights Reserved.
+      </div>
+      <div class="mt-2 sm:mt-0 flex items-center gap-4">
+        <button onclick="openAdminModal()" class="text-stone-400 hover:text-amber-400 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-lock text-[10px]"></i> Store Admin Login
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP CHAT BUTTON -->
+  <a href="https://wa.me/919039285435?text=Hello%20Agrawal%20Smartchoice!%20I%20want%20to%20inquire%20about%20your%20products." 
+     target="_blank" 
+     class="fixed bottom-6 right-6 z-50 bg-emerald-600 hover:bg-emerald-700 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition transform hover:scale-110">
+    <i class="fa-brands fa-whatsapp text-3xl"></i>
+  </a>
+
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- CART DRAWER -->
+  <div id="cartDrawer" class="fixed inset-0 z-50 invisible opacity-0 transition-opacity duration-300">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="toggleCart()"></div>
+    <div class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-white shadow-2xl flex flex-col transform translate-x-full transition-transform duration-300" id="cartContent">
+      <!-- Cart Header -->
+      <div class="p-5 border-b border-stone-200 flex items-center justify-between bg-stone-50">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-bag-shopping text-amber-600"></i>
+          <h3 class="font-serif font-bold text-lg text-stone-900">Your Shopping Bag</h3>
+        </div>
+        <button onclick="toggleCart()" class="p-2 text-stone-400 hover:text-stone-800">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- Cart Items Container -->
+      <div id="cartItemsList" class="flex-1 overflow-y-auto p-5 space-y-4">
+        <!-- Rendered with JS -->
+      </div>
+
+      <!-- Cart Footer / Checkout Form -->
+      <div class="p-5 border-t border-stone-200 bg-stone-50">
+        <div class="flex justify-between items-center mb-4">
+          <span class="text-sm font-semibold text-stone-600">Subtotal</span>
+          <span id="cartTotalPrice" class="text-xl font-bold text-stone-900">₹0</span>
+        </div>
+
+        <button onclick="openCheckoutModal()" id="checkoutBtn" class="w-full bg-stone-900 hover:bg-amber-800 text-white py-3.5 rounded-xl font-semibold shadow-md transition disabled:opacity-50">
+          Proceed to Order (WhatsApp / UPI)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div id="checkoutModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto shadow-2xl">
+      <div class="flex justify-between items-center pb-4 border-b border-stone-200">
+        <h3 class="text-xl font-serif font-bold text-stone-900">Delivery Details</h3>
+        <button onclick="closeCheckoutModal()" class="text-stone-400 hover:text-stone-700"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <form id="orderForm" onsubmit="processOrder(event)" class="mt-5 space-y-3.5 text-xs">
+        <div>
+          <label class="block font-semibold text-stone-700 mb-1">Full Name</label>
+          <input type="text" id="custName" required placeholder="Enter your full name" class="w-full px-3 py-2 border rounded-lg text-sm">
+        </div>
+        <div>
+          <label class="block font-semibold text-stone-700 mb-1">WhatsApp / Phone Number</label>
+          <input type="tel" id="custPhone" required placeholder="10-digit mobile number" class="w-full px-3 py-2 border rounded-lg text-sm">
+        </div>
+        <div>
+          <label class="block font-semibold text-stone-700 mb-1">Full Shipping Address</label>
+          <textarea id="custAddress" required rows="2" placeholder="House no, street, landmark, city & pincode" class="w-full px-3 py-2 border rounded-lg text-sm"></textarea>
+        </div>
+        <div>
+          <label class="block font-semibold text-stone-700 mb-1">Payment Method</label>
+          <div class="grid grid-cols-2 gap-2 mt-1">
+            <label class="flex items-center gap-2 border p-2.5 rounded-lg cursor-pointer hover:bg-stone-50">
+              <input type="radio" name="payMethod" value="WhatsApp Confirmation / COD" checked>
+              <span>WhatsApp / COD</span>
+            </label>
+            <label class="flex items-center gap-2 border p-2.5 rounded-lg cursor-pointer hover:bg-stone-50">
+              <input type="radio" name="payMethod" value="UPI Instant (GPay / PhonePe)">
+              <span>UPI / Instant</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="pt-4">
+          <button type="submit" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white py-3.5 rounded-xl font-semibold shadow flex items-center justify-center gap-2 text-sm">
+            <i class="fa-brands fa-whatsapp text-lg"></i> Send Order via WhatsApp & Email
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- PRODUCT DETAILS MODAL -->
+  <div id="quickViewModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto shadow-2xl relative">
+      <button onclick="closeQuickView()" class="absolute top-6 right-6 text-stone-400 hover:text-stone-800 text-lg">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="quickViewContent" class="grid sm:grid-cols-2 gap-6 items-center">
+        <!-- Rendered Dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ADMIN MANAGEMENT MODAL (Password: 1234) -->
+  <div id="adminModal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-3xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto shadow-2xl">
+      <div class="flex justify-between items-center pb-4 border-b border-stone-200">
+        <div>
+          <h3 class="text-xl font-serif font-bold text-stone-900">Store Admin Panel</h3>
+          <p class="text-xs text-stone-500">Add, Edit or Delete Store Products</p>
+        </div>
+        <button onclick="closeAdminModal()" class="text-stone-400 hover:text-stone-700"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- Auth section -->
+      <div id="adminAuthSection" class="py-8 text-center">
+        <i class="fa-solid fa-shield-halved text-4xl text-amber-600 mb-3"></i>
+        <h4 class="text-base font-semibold text-stone-800 mb-2">Enter Store Security PIN</h4>
+        <div class="max-w-xs mx-auto flex gap-2">
+          <input type="password" id="adminPin" placeholder="Default PIN: 1234" class="w-full px-3 py-2 border rounded-lg text-center text-sm">
+          <button onclick="verifyAdminPin()" class="bg-stone-900 text-white px-5 py-2 rounded-lg text-xs font-semibold">Unlock</button>
+        </div>
+      </div>
+
+      <!-- Dashboard section (Hidden by default) -->
+      <div id="adminDashboard" class="hidden pt-4 space-y-6">
+        <!-- Add Product Form -->
+        <div class="bg-stone-50 p-5 rounded-2xl border border-stone-200">
+          <h4 class="font-bold text-stone-900 text-sm mb-3">Add New Product</h4>
+          <form onsubmit="handleAddNewProduct(event)" class="grid sm:grid-cols-2 gap-3 text-xs">
+            <input type="text" id="newProdName" placeholder="Product Title (e.g. Aloe Neem Soap)" required class="px-3 py-2 border rounded-lg">
+            <input type="text" id="newProdTagline" placeholder="Subtitle / Tagline" required class="px-3 py-2 border rounded-lg">
+            <input type="number" id="newProdPrice" placeholder="Selling Price (₹)" required class="px-3 py-2 border rounded-lg">
+            <input type="number" id="newProdMrp" placeholder="MRP (₹)" required class="px-3 py-2 border rounded-lg">
+            <input type="text" id="newProdSize" placeholder="Pack Size (e.g. 100g)" required class="px-3 py-2 border rounded-lg">
+            <input type="url" id="newProdImg" placeholder="Image URL (Direct web link)" required class="px-3 py-2 border rounded-lg">
+            <textarea id="newProdDesc" placeholder="Description & benefits" class="sm:col-span-2 px-3 py-2 border rounded-lg"></textarea>
+            <button type="submit" class="sm:col-span-2 bg-amber-600 hover:bg-amber-700 text-white py-2.5 rounded-lg font-semibold text-xs transition">
+              + Save & Publish Product
+            </button>
+          </form>
+        </div>
+
+        <!-- Current Products List for Delete/Manage -->
+        <div>
+          <h4 class="font-bold text-stone-900 text-sm mb-3">Active Products Inventory</h4>
+          <div id="adminProductTable" class="divide-y divide-stone-200 border rounded-xl overflow-hidden text-xs">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- POLICY MODAL -->
+  <div id="policyModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 max-h-[85vh] overflow-y-auto shadow-2xl">
+      <div class="flex justify-between items-center pb-3 border-b border-stone-200">
+        <h3 id="policyModalTitle" class="text-lg font-serif font-bold text-stone-900">Policy</h3>
+        <button onclick="closePolicyModal()" class="text-stone-400 hover:text-stone-700"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+      <div id="policyModalBody" class="mt-4 text-xs text-stone-600 leading-relaxed space-y-3"></div>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+  <script>
+    // Initial Stock Data (stored in localStorage so owner modifications persist)
+    const initialProducts = [
+      {
+        id: 1,
+        title: "C-GLOW Vitamin C & Goat Milk Soap",
+        tagline: "Brightening, Deep Nourishment & Natural Glow",
+        price: 49,
+        mrp: 75,
+        size: "75g",
+        image: "https://images.unsplash.com/photo-1607006314644-8d96d1921350?auto=format&fit=crop&w=700&q=80",
+        description: "Enriched with real goat milk solids and natural Vitamin C essence to clarify hyperpigmentation, brighten dull complexion, and deeply nourish skin cells.",
+        ingredients: "Goat Milk Solids, Vitamin C extract, Cold Pressed Coconut Oil, Glycerin, Botanical Perfume.",
+        directions: "Lather between wet palms, massage gently over face & body for 60 seconds, then rinse thoroughly."
+      },
+      {
+        id: 2,
+        title: "Sunshine Orange Beauty Soap",
+        tagline: "Pure Citrus Zing & Fresh Revitalisation",
+        price: 25,
+        mrp: 25,
+        size: "100g",
+        image: "https://images.unsplash.com/photo-1547793548-710ec861bb6e?auto=format&fit=crop&w=700&q=80",
+        description: "Packed with the natural goodness of fresh sweet orange peels, this soap revitalizes dull morning skin, cleanses dirt gently, and leaves a lingering citrus fragrance.",
+        ingredients: "Orange Peel Extracts, Essential Citrus Oils, Pure Soap Base, Emollients.",
+        directions: "Use daily during bath. Excellent for both hot and cold showers."
+      },
+      {
+        id: 3,
+        title: "Earthy Essence | Multani Mitti Soap",
+        tagline: "Natural Clay Cleansing Bar | Deep Pore Purification",
+        price: 65,
+        mrp: 85,
+        size: "100g",
+        image: "https://images.unsplash.com/photo-1608248597359-2e11894a4505?auto=format&fit=crop&w=700&q=80",
+        description: "Traditional Fuller's Earth (Multani Mitti) cleansing bar that gently absorbs deep-seated oil, impurities, and dead cells to reveal clear, naturally soft skin.",
+        ingredients: "Refined Fuller's Earth (Multani Mitti), Sandalwood extract, Neem oil, Pure Botanical base.",
+        directions: "Apply gently on damp skin, leave for 30 seconds for clay absorption, and rinse off."
+      }
+    ];
+
+    // Initialize State
+    let products = JSON.parse(localStorage.getItem('smartchoice_products')) || initialProducts;
+    let cart = JSON.parse(localStorage.getItem('smartchoice_cart')) || [];
+    let reviews = JSON.parse(localStorage.getItem('smartchoice_reviews')) || [];
+
+    document.getElementById('currentYear').innerText = new Date().getFullYear();
+
+    // RENDER PRODUCTS IN SHOP
+    function renderProducts() {
+      const grid = document.getElementById('productGrid');
+      grid.innerHTML = products.map(p => `
+        <div class="bg-white rounded-3xl p-5 border border-stone-200/90 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="relative h-64 rounded-2xl overflow-hidden bg-stone-100 mb-4 cursor-pointer" onclick="openQuickView(${p.id})">
+              <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+              <span class="absolute top-3 right-3 bg-stone-900/80 backdrop-blur-md text-white text-[11px] font-medium px-2.5 py-1 rounded-full">
+                ${p.size}
+              </span>
+              ${p.mrp > p.price ? `<span class="absolute top-3 left-3 bg-amber-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">Save ₹${p.mrp - p.price}</span>` : ''}
+            </div>
+            
+            <div class="cursor-pointer" onclick="openQuickView(${p.id})">
+              <p class="text-[11px] font-bold uppercase tracking-wider text-amber-700">Artisanal Bar</p>
+              <h3 class="font-serif font-bold text-lg text-stone-900 group-hover:text-amber-800 transition line-clamp-1">${p.title}</h3>
+              <p class="text-xs text-stone-500 mt-1 line-clamp-2">${p.tagline}</p>
+            </div>
+          </div>
+
+          <div class="mt-5 pt-4 border-t border-stone-100 flex items-center justify-between">
+            <div>
+              <span class="text-xl font-bold text-stone-900">₹${p.price}</span>
+              ${p.mrp > p.price ? `<span class="text-xs text-stone-400 line-through ml-1.5">₹${p.mrp}</span>` : ''}
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="openQuickView(${p.id})" class="p-2.5 rounded-xl border border-stone-200 text-stone-600 hover:bg-stone-50" title="Details">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+              <button onclick="addToCart(${p.id})" class="bg-stone-900 hover:bg-amber-800 text-white px-4 py-2.5 rounded-xl text-xs font-semibold shadow transition flex items-center gap-1.5">
+                <i class="fa-solid fa-plus"></i> Add
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      renderAdminProductList();
+    }
+
+    // CART MANAGEMENT
+    function addToCart(productId) {
+      const item = products.find(p => p.id === productId);
+      if(!item) return;
+
+      const existing = cart.find(c => c.id === productId);
+      if(existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ ...item, qty: 1 });
+      }
+
+      saveCart();
+      updateCartUI();
+      openCart();
+    }
+
+    function changeQty(id, delta) {
+      const item = cart.find(c => c.id === id);
+      if(!item) return;
+      item.qty += delta;
+      if(item.qty <= 0) {
+        cart = cart.filter(c => c.id !== id);
+      }
+      saveCart();
+      updateCartUI();
+    }
+
+    function saveCart() {
+      localStorage.setItem('smartchoice_cart', JSON.stringify(cart));
+    }
+
+    function updateCartUI() {
+      const count = cart.reduce((acc, curr) => acc + curr.qty, 0);
+      document.getElementById('cartCountBadge').innerText = count;
+
+      const list = document.getElementById('cartItemsList');
+      if(cart.length === 0) {
+        list.innerHTML = `
+          <div class="text-center py-12 text-stone-400">
+            <i class="fa-solid fa-basket-shopping text-4xl mb-3"></i>
+            <p class="text-sm">Your shopping bag is empty.</p>
+          </div>
+        `;
+        document.getElementById('cartTotalPrice').innerText = "₹0";
+        document.getElementById('checkoutBtn').disabled = true;
+        return;
+      }
+
+      document.getElementById('checkoutBtn').disabled = false;
+      let total = 0;
+      list.innerHTML = cart.map(item => {
+        const itemTotal = item.price * item.qty;
+        total += itemTotal;
+        return `
+          <div class="flex items-center gap-3.5 bg-stone-50 p-3 rounded-2xl border border-stone-200">
+            <img src="${item.image}" alt="${item.title}" class="w-16 h-16 rounded-xl object-cover">
+            <div class="flex-1">
+              <h4 class="font-serif font-bold text-xs text-stone-900 line-clamp-1">${item.title}</h4>
+              <p class="text-[11px] text-stone-500">₹${item.price} each</p>
+              <div class="flex items-center gap-2 mt-1.5">
+                <button onclick="changeQty(${item.id}, -1)" class="w-6 h-6 bg-white border border-stone-300 rounded-md flex items-center justify-center text-xs font-bold hover:bg-stone-200">-</button>
+                <span class="text-xs font-semibold">${item.qty}</span>
+                <button onclick="changeQty(${item.id}, 1)" class="w-6 h-6 bg-white border border-stone-300 rounded-md flex items-center justify-center text-xs font-bold hover:bg-stone-200">+</button>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="font-bold text-xs text-stone-900">₹${itemTotal}</p>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      document.getElementById('cartTotalPrice').innerText = `₹${total}`;
+    }
+
+    function toggleCart() {
+      const drawer = document.getElementById('cartDrawer');
+      const content = document.getElementById('cartContent');
+      if (drawer.classList.contains('invisible')) {
+        openCart();
+      } else {
+        closeCart();
+      }
+    }
+
+    function openCart() {
+      const drawer = document.getElementById('cartDrawer');
+      const content = document.getElementById('cartContent');
+      drawer.classList.remove('invisible', 'opacity-0');
+      content.classList.remove('translate-x-full');
+    }
+
+    function closeCart() {
+      const drawer = document.getElementById('cartDrawer');
+      const content = document.getElementById('cartContent');
+      content.classList.add('translate-x-full');
+      setTimeout(() => drawer.classList.add('invisible', 'opacity-0'), 250);
+    }
+
+    // CHECKOUT LOGIC & ORDER DISPATCH VIA WHATSAPP / EMAIL
+    function openCheckoutModal() {
+      closeCart();
+      document.getElementById('checkoutModal').classList.remove('hidden');
+    }
+
+    function closeCheckoutModal() {
+      document.getElementById('checkoutModal').classList.add('hidden');
+    }
+
+    function processOrder(e) {
+      e.preventDefault();
+      const name = document.getElementById('custName').value;
+      const phone = document.getElementById('custPhone').value;
+      const address = document.getElementById('custAddress').value;
+      const payment = document.querySelector('input[name="payMethod"]:checked').value;
+
+      let itemsSummary = "";
+      let totalAmount = 0;
+      cart.forEach((i, idx) => {
+        itemsSummary += `${idx + 1}. ${i.title} (${i.size}) x ${i.qty} = ₹${i.price * i.qty}\n`;
+        totalAmount += (i.price * i.qty);
+      });
+
+      // Construct WhatsApp message
+      const message = `*NEW ORDER - AGRAWAL SMARTCHOICE*\n` +
+                      `-------------------------------\n` +
+                      `👤 *Customer Name:* ${name}\n` +
+                      `📞 *Contact Number:* ${phone}\n` +
+                      `🏠 *Shipping Address:* ${address}\n\n` +
+                      `🛒 *Order Items:*\n${itemsSummary}\n` +
+                      `💰 *Total Amount Payable:* ₹${totalAmount}\n` +
+                      `💳 *Payment Mode:* ${payment}\n` +
+                      `-------------------------------\n` +
+                      `Please confirm dispatch details!`;
+
+      // Clear cart
+      cart = [];
+      saveCart();
+      updateCartUI();
+      closeCheckoutModal();
+
+      // Open WhatsApp with direct formatted text
+      const waUrl = `https://wa.me/919039285435?text=${encodeURIComponent(message)}`;
+      window.open(waUrl, '_blank');
+
+      alert("Thank you! Your order draft has been generated. Please send the message on WhatsApp to complete order confirmation.");
+    }
+
+    // QUICK VIEW MODAL
+    function openQuickView(id) {
+      const p = products.find(prod => prod.id === id);
+      if(!p) return;
+
+      const container = document.getElementById('quickViewContent');
+      container.innerHTML = `
+        <div class="h-64 sm:h-80 rounded-2xl overflow-hidden bg-stone-100">
+          <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover">
+        </div>
+        <div>
+          <span class="text-xs uppercase font-bold tracking-wider text-amber-700">Artisanal Bar • ${p.size}</span>
+          <h3 class="font-serif font-bold text-2xl text-stone-900 mt-1">${p.title}</h3>
+          <p class="text-xs text-stone-500 italic mt-1">${p.tagline}</p>
+          
+          <div class="my-3">
+            <span class="text-2xl font-bold text-stone-900">₹${p.price}</span>
+            ${p.mrp > p.price ? `<span class="text-sm text-stone-400 line-through ml-2">MRP: ₹${p.mrp}</span>` : ''}
+          </div>
+
+          <div class="space-y-3 text-xs text-stone-600 leading-relaxed border-t border-b border-stone-200 py-3">
+            <p><strong>Description:</strong> ${p.description}</p>
+            <p><strong>Key Ingredients:</strong> ${p.ingredients || 'Natural extracts & botanicals.'}</p>
+            <p><strong>Usage:</strong> ${p.directions || 'Gently lather over wet skin & rinse thoroughly.'}</p>
+          </div>
+
+          <div class="mt-4 flex gap-3">
+            <button onclick="addToCart(${p.id}); closeQuickView();" class="flex-1 bg-stone-900 hover:bg-amber-800 text-white py-3 rounded-xl font-semibold text-xs shadow transition">
+              Add To Cart
+            </button>
+            <a href="https://wa.me/919039285435?text=Hello!%20I%20have%20questions%20about%20${encodeURIComponent(p.title)}" target="_blank" class="px-4 py-3 border border-stone-300 rounded-xl hover:bg-stone-50 flex items-center justify-center text-emerald-700">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+          </div>
+        </div>
+      `;
+
+      document.getElementById('quickViewModal').classList.remove('hidden');
+    }
+
+    function closeQuickView() {
+      document.getElementById('quickViewModal').classList.add('hidden');
+    }
+
+    // FEEDBACK SYSTEM
+    function handleFeedbackSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('fbName').value;
+      const city = document.getElementById('fbCity').value;
+      const rating = document.getElementById('fbRating').value;
+      const message = document.getElementById('fbMessage').value;
+
+      const reviewCard = document.createElement('div');
+      reviewCard.className = "p-6 bg-white rounded-2xl border border-stone-200 shadow-sm animate-fade-in";
+      reviewCard.innerHTML = `
+        <div class="flex items-center gap-1 text-amber-500 text-xs mb-2">
+          ${'<i class="fa-solid fa-star"></i>'.repeat(rating)}
+        </div>
+        <p class="text-stone-700 text-sm italic">"${message}"</p>
+        <div class="mt-3 flex justify-between items-center text-xs text-stone-500">
+          <span class="font-semibold text-stone-800">${name}, ${city}</span>
+          <span>Verified Reviewer</span>
+        </div>
+      `;
+
+      document.getElementById('reviewsList').prepend(reviewCard);
+      alert("Thank you! Your review has been added successfully.");
+      document.getElementById('feedbackForm').reset();
+    }
+
+    // ADMIN MANAGEMENT
+    function openAdminModal() {
+      document.getElementById('adminModal').classList.remove('hidden');
+    }
+
+    function closeAdminModal() {
+      document.getElementById('adminModal').classList.add('hidden');
+    }
+
+    function verifyAdminPin() {
+      const pin = document.getElementById('adminPin').value;
+      if(pin === "1234") {
+        document.getElementById('adminAuthSection').classList.add('hidden');
+        document.getElementById('adminDashboard').classList.remove('hidden');
+      } else {
+        alert("Incorrect PIN! (Default is 1234)");
+      }
+    }
+
+    function handleAddNewProduct(e) {
+      e.preventDefault();
+      const newP = {
+        id: Date.now(),
+        title: document.getElementById('newProdName').value,
+        tagline: document.getElementById('newProdTagline').value,
+        price: Number(document.getElementById('newProdPrice').value),
+        mrp: Number(document.getElementById('newProdMrp').value),
+        size: document.getElementById('newProdSize').value,
+        image: document.getElementById('newProdImg').value,
+        description: document.getElementById('newProdDesc').value || "Premium natural bathing soap bar.",
+        ingredients: "Natural cleansing base, botanical extracts.",
+        directions: "Lather and rinse thoroughly with clean water."
+      };
+
+      products.push(newP);
+      localStorage.setItem('smartchoice_products', JSON.stringify(products));
+      renderProducts();
+      e.target.reset();
+      alert("New product published live!");
+    }
+
+    function deleteProduct(id) {
+      if(confirm("Are you sure you want to remove this product?")) {
+        products = products.filter(p => p.id !== id);
+        localStorage.setItem('smartchoice_products', JSON.stringify(products));
+        renderProducts();
+      }
+    }
+
+    function renderAdminProductList() {
+      const table = document.getElementById('adminProductTable');
+      if(!table) return;
+      table.innerHTML = products.map(p => `
+        <div class="p-3 bg-white flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <img src="${p.image}" class="w-10 h-10 rounded-lg object-cover">
+            <div>
+              <p class="font-bold text-stone-900">${p.title}</p>
+              <p class="text-[10px] text-stone-500">₹${p.price} | MRP: ₹${p.mrp} | Size: ${p.size}</p>
+            </div>
+          </div>
+          <button onclick="deleteProduct(${p.id})" class="text-rose-600 hover:text-rose-800 p-2 text-xs font-semibold">
+            <i class="fa-solid fa-trash"></i> Delete
+          </button>
+        </div>
+      `).join('');
+    }
+
+    // POLICIES POPUP
+    const policyData = {
+      shipping: {
+        title: "Shipping & Delivery Policy",
+        content: `
+          <p>• All orders placed on Agrawal Smartchoice are processed within 24-48 business hours.</p>
+          <p>• Standard shipping reaches all major Indian cities within 3-5 business days. Remote locations may require 5-7 days.</p>
+          <p>• We provide WhatsApp order dispatch tracking as soon as your shipment is dispatched.</p>
+          <p>• Free shipping is applicable on all bundle orders above ₹499.</p>
+        `
+      },
+      returns: {
+        title: "Return & Refund Policy",
+        content: `
+          <p>• Due to hygiene & personal care standards, opened or used soap bars cannot be returned.</p>
+          <p>• In case of transit damage or wrong item received, kindly share an unboxing video/photo on WhatsApp (+91 9039285435) within 48 hours of delivery.</p>
+          <p>• Approved claims are processed for immediate 100% free replacement or full refund within 3-5 business days.</p>
+        `
+      },
+      privacy: {
+        title: "Privacy & Data Protection",
+        content: `
+          <p>• Your personal info (Name, WhatsApp number, Address) is strictly used for order dispatching and customer support.</p>
+          <p>• We do NOT sell or share your data with 3rd party marketing agencies.</p>
+          <p>• Safe & direct checkout via WhatsApp protects against unauthorized payment leaks.</p>
+        `
+      },
+      terms: {
+        title: "Terms & Conditions",
+        content: `
+          <p>• By ordering on Agrawal Smartchoice, you agree to our standard consumer terms.</p>
+          <p>• Product imagery is captured naturally, but handmade natural soap colors can show mild herbal variations from batch to batch.</p>
+          <p>• Patch tests are recommended prior to use for individuals with specific plant allergies.</p>
+        `
+      }
+    };
+
+    function showPolicy(type) {
+      const p = policyData[type];
+      if(!p) return;
+      document.getElementById('policyModalTitle').innerText = p.title;
+      document.getElementById('policyModalBody').innerHTML = p.content;
+      document.getElementById('policyModal').classList.remove('hidden');
+    }
+
+    function closePolicyModal() {
+      document.getElementById('policyModal').classList.add('hidden');
+    }
+
+    // Load up on startup
+    window.addEventListener('DOMContentLoaded', () => {
+      renderProducts();
+      updateCartUI();
+    });
+  </script>
+</body>
+</html>
