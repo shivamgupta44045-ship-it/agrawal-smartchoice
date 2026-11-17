@@ -1,0 +1,25 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1200" fill="#FFF5EE"/>
+  <circle cx="600" cy="350" r="300" fill="#FFD9A8" opacity="0.7"/>
+  <g transform="translate(180 130)">
+    <rect x="150" y="140" width="520" height="700" rx="60" fill="#FFF9F6" stroke="#F1C49A" stroke-width="8"/>
+    <rect x="205" y="240" width="410" height="510" rx="42" fill="url(#paint0_linear_2_3)"/>
+    <circle cx="410" cy="485" r="150" fill="#FFCD66" opacity="0.4"/>
+    <path d="M305 450C335 400 410 370 473 395C510 411 550 445 563 492C575 537 557 598 507 628C459 658 370 660 320 615C268 569 273 505 305 450Z" fill="#F6B25B" opacity="0.42"/>
+    <rect x="300" y="385" width="220" height="124" rx="18" fill="#FFF1DF" opacity="0.85"/>
+    <path d="M348 260C415 200 460 195 510 250L535 287H312L348 260Z" fill="#F7C76A"/>
+    <rect x="315" y="175" width="195" height="88" rx="24" fill="#FFF3E5"/>
+    <text x="413" y="233" text-anchor="middle" fill="#B96C23" font-family="Georgia, serif" font-size="38" font-weight="700">SUNSHINE</text>
+    <text x="410" y="320" text-anchor="middle" fill="#6D4920" font-family="Arial, sans-serif" font-size="24" font-weight="700">Orange • Citrus Glow</text>
+    <rect x="310" y="560" width="210" height="24" rx="12" fill="#F7D68E" opacity="0.8"/>
+    <rect x="280" y="605" width="270" height="22" rx="11" fill="#F9E9C5" opacity="0.8"/>
+    <text x="410" y="745" text-anchor="middle" fill="#AC6B2A" font-family="Arial, sans-serif" font-size="24" font-weight="700">Agrawal Smartchoice</text>
+  </g>
+  <defs>
+    <linearGradient id="paint0_linear_2_3" x1="240" y1="240" x2="640" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD982"/>
+      <stop offset="0.52" stop-color="#F7B657"/>
+      <stop offset="1" stop-color="#E88E2B"/>
+    </linearGradient>
+  </defs>
+</svg>

@@ -1,0 +1,24 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1200" fill="#F3EFE8"/>
+  <circle cx="600" cy="350" r="300" fill="#D9D3BC" opacity="0.7"/>
+  <g transform="translate(180 140)">
+    <rect x="150" y="140" width="520" height="700" rx="60" fill="#F9F7F3" stroke="#D5C7AE" stroke-width="8"/>
+    <rect x="210" y="245" width="400" height="500" rx="46" fill="url(#paint0_linear_3_4)"/>
+    <path d="M350 290C410 240 470 245 520 295C560 338 580 425 560 503C538 590 474 647 410 662C343 678 286 652 256 601C222 544 219 468 247 405C272 350 299 320 350 290Z" fill="#DFD7B8" opacity="0.55"/>
+    <rect x="300" y="400" width="220" height="120" rx="18" fill="#F3F1E6" opacity="0.9"/>
+    <path d="M340 260L400 190H515L470 260H340Z" fill="#DCE2C7"/>
+    <rect x="315" y="176" width="198" height="86" rx="24" fill="#F4F0E8"/>
+    <text x="414" y="232" text-anchor="middle" fill="#686C2B" font-family="Georgia, serif" font-size="36" font-weight="700">MULTANI</text>
+    <text x="415" y="328" text-anchor="middle" fill="#5D5A45" font-family="Arial, sans-serif" font-size="22" font-weight="700">Clay • Natural Purify</text>
+    <rect x="310" y="560" width="210" height="24" rx="12" fill="#D7D7BC" opacity="0.85"/>
+    <rect x="280" y="605" width="270" height="22" rx="11" fill="#EFE2BF" opacity="0.9"/>
+    <text x="415" y="742" text-anchor="middle" fill="#657042" font-family="Arial, sans-serif" font-size="24" font-weight="700">Agrawal Smartchoice</text>
+  </g>
+  <defs>
+    <linearGradient id="paint0_linear_3_4" x1="260" y1="245" x2="610" y2="745" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E7E1B7"/>
+      <stop offset="0.5" stop-color="#C8BE8A"/>
+      <stop offset="1" stop-color="#A7A05F"/>
+    </linearGradient>
+  </defs>
+</svg>
